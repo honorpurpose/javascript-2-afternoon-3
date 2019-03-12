@@ -133,14 +133,13 @@ contains(names, 'Colt', function(result){
 
 //Code Here
 
-function uniq(array, callback){
-  let modArray = [];
-  for(let i = 0; i < array.length; i++){
-    if(modArray.indexOf(array[i]) == -1){
-        modArray.push(array[i])
-    }
+const uniq = (arr, cb) => {
+  const newArr = []
+  for (let i = 0; i < arr.length; i++) {
+    if (newArr.indexOf(arr[i]) === -1)
+      newArr.push(arr[i])
   }
-  callback(modArray);
+  cb(newArr)
 }
 
 
